@@ -39,64 +39,65 @@
         </header>
 
         <main class="main-content">
-            <section class="form-section" aria-labelledby="contact-form-title">
-                <div class="form-container">
-                    <h2 id="contact-form-title">Solicite uma Demonstração Gratuita</h2>
-                    <form id="contactForm" role="form">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required 
-                                   aria-required="true" placeholder="Seu nome completo"
-                                   autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Corporativo</label>
-                            <input type="email" id="email" name="email" required 
-                                   aria-required="true" placeholder="seu@email.com"
-                                   autocomplete="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefone Comercial</label>
-                            <input type="tel" id="phone" name="phone" required 
-                                   placeholder="+55 (00) 00000-0000" aria-required="true"
-                                   autocomplete="tel">
-                        </div>
-                        <button type="submit" class="submit-button" aria-label="Enviar formulário">
-                            <span class="button-text">Receber Contato</span>
-                        </button>
-                    </form>
-                </div>
-            </section>
+            <div class="content-grid">
+                <section class="form-section" aria-labelledby="contact-form-title">
+                    <div class="form-container">
+                        <h2 id="contact-form-title">Solicitar Contato</h2>
+                        <form id="contactForm" role="form">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                            </div>
 
-            <section class="benefits-section" aria-labelledby="benefits-title">
-                <h2 id="benefits-title">Benefícios da Automação Low-Code</h2>
-                <div class="benefits-grid">
-                    <article class="benefit-card">
-                        <h3>🚀 Desenvolvimento 10x Mais Rápido</h3>
-                        <p>Reduza o tempo de desenvolvimento em até 90% com nossa plataforma visual intuitiva.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>💰 Economia de até 70% em Custos</h3>
-                        <p>Diminua significativamente os custos operacionais eliminando processos manuais.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>🔄 Integração com +300 Sistemas</h3>
-                        <p>Conecte-se facilmente com centenas de aplicativos e sistemas empresariais.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>🛠️ Implementação em Semanas</h3>
-                        <p>Coloque soluções em produção em questão de semanas com nossa metodologia ágil.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>🤝 Suporte Especializado 24/7</h3>
-                        <p>Conte com nossa equipe de especialistas para suporte técnico e consultoria.</p>
-                    </article>
-                    <article class="benefit-card">
-                        <h3>📊 ROI Comprovado em 3 Meses</h3>
-                        <p>Obtenha retorno sobre investimento em até 3 meses com aumento de produtividade.</p>
-                    </article>
-                </div>
-            </section>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="Seu email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <div class="phone-input">
+                                    <input type="text" id="phone" name="phone" required placeholder="+55">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-button">SOLICITAR</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="benefits-section" aria-labelledby="benefits-title">
+                    <div class="benefits-container">
+                        <h2 id="benefits-title" class="benefits-title">Benefícios da Automação Low-Code</h2>
+                        <div class="benefits-grid">
+                            <article class="benefit-card">
+                                <h3>🚀 Desenvolvimento 10x Mais Rápido</h3>
+                                <p>Reduza o tempo de desenvolvimento em até 90% com nossa plataforma visual intuitiva.</p>
+                            </article>
+                            <article class="benefit-card">
+                                <h3>💰 Economia de até 70% em Custos</h3>
+                                <p>Diminua significativamente os custos operacionais eliminando processos manuais.</p>
+                            </article>
+                            <article class="benefit-card">
+                                <h3>🔄 Integração com +300 Sistemas</h3>
+                                <p>Conecte-se facilmente com centenas de aplicativos e sistemas empresariais.</p>
+                            </article>
+                            <article class="benefit-card">
+                                <h3>🛠️ Implementação em Semanas</h3>
+                                <p>Coloque soluções em produção em questão de semanas com nossa metodologia ágil.</p>
+                            </article>
+                            <article class="benefit-card">
+                                <h3>🤝 Suporte Especializado 24/7</h3>
+                                <p>Conte com nossa equipe de especialistas para suporte técnico e consultoria.</p>
+                            </article>
+                            <article class="benefit-card">
+                                <h3>📊 ROI Comprovado em 3 Meses</h3>
+                                <p>Obtenha retorno sobre investimento em até 3 meses com aumento de produtividade.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer>

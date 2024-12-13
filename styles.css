@@ -136,132 +136,122 @@ header::before {
 }
 
 .main-content {
+    position: relative;
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefits-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+    grid-column: 2;
+}
+
+#contact-form-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(300px, 2fr) 3fr;
     gap: 3rem;
-    margin-top: 2rem;
+    align-items: flex-start;
+    padding-top: 3rem;
 }
 
 .form-section {
     background: var(--card-background);
-    padding: 2.5rem;
-    border-radius: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--card-border);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-section:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
+    height: fit-content;
+    margin-top: 5rem; /* Você pode aumentar este valor para descer mais o formulário */
 }
 
 .form-container {
-    max-width: 500px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
 }
 
-label {
+.form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--label-color);
-    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.9rem;
 }
 
-input, textarea {
+.form-group input {
     width: 100%;
     padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    border: 2px solid var(--input-border);
-    border-radius: 0.75rem;
-    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
-    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-label {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--card-background);
-    padding: 0 0.5rem;
-    color: var(--label-color);
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-input:focus ~ label,
-input:not(:placeholder-shown) ~ label {
-    top: 0;
-    font-size: 0.8rem;
-    color: var(--primary-color);
-    font-weight: 500;
-}
-
-button[type="submit"] {
+.submit-button {
     width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 0.75rem;
-    background: var(--gradient-primary);
+    padding: 0.75rem;
+    background: #2ecc71; /* Verde mais vibrante */
     color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
     font-weight: 600;
+    letter-spacing: 1px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 
-button[type="submit"]:hover {
+.submit-button:hover {
+    background: #27ae60; /* Verde mais escuro no hover */
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    background: var(--gradient-hover);
-}
-
-button[type="submit"]::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    transform: rotate(45deg);
-    transition: 0.6s;
-}
-
-button[type="submit"]:hover::after {
-    left: 100%;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efeito gloss no texto */
 }
 
 .benefits-section {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+}
+
+.benefits-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 2rem;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .benefit-card {
     background: var(--card-background);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--card-border);
@@ -300,35 +290,33 @@ footer {
     border-top: 1px solid var(--input-border);
 }
 
-@media (max-width: 768px) {
-    .main-content {
+@media (max-width: 1024px) {
+    .content-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .container {
-        padding: 1rem;
-    }
-    
-    header {
-        padding: 2rem 1rem;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .form-section, .benefits-section {
-        padding: 1.5rem;
+        gap: 2rem;
     }
 
-    .theme-toggle {
-        top: 1rem;
-        right: 1rem;
-        width: 42px;
-        height: 42px;
-        font-size: 1.2rem;
+    .form-section {
+        position: relative;
+        top: 0;
     }
-    
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .benefits-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section,
     .benefit-card {
         padding: 1.5rem;
     }
