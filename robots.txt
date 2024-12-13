@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://primestratus.com.br/sitemap.xml
+
+# Optimize crawl-rate
+Crawl-delay: 1

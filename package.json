@@ -1,0 +1,12 @@
+{
+  "name": "n8n-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page for n8n low-code automation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
