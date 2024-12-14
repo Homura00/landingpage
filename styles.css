@@ -211,7 +211,7 @@ header::before {
 .submit-button {
     width: 100%;
     padding: 0.75rem;
-    background: #2ecc71; /* Verde mais vibrante */
+    background: #2ecc71;
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -224,10 +224,17 @@ header::before {
 }
 
 .submit-button:hover {
-    background: #27ae60; /* Verde mais escuro no hover */
+    background: #27ae60;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efeito gloss no texto */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.submit-button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 .benefits-section {
